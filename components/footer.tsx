@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className="bg-purple-100 relative"
+        className="bg-purple-100 text-black relative"
         style={{
           backgroundImage: `url(../images/circles.png)`,
           backgroundSize: "contain",
