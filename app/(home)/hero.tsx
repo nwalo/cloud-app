@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
 
         <div className="col-span-12 lg:col-span-6 p-5 relative">
-          <div className="rounded-2xl flex shadow-lg relative w-full h-full">
+          <div className="rounded-2xl flex shadow-lg relative min-w-[100px] min-h-[350px] w-full h-full">
             <Image
               src={CirclePattern}
               alt="Circle pattern"
