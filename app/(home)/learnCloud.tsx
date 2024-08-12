@@ -5,6 +5,7 @@ import CirclePattern from "../../public/images/circles.png";
 import { GraduationCap } from "lucide-react";
 import CustomButton from "@/components/custom/customButton";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import { link } from "fs";
 
 const LearnCloud = () => {
   const cards = [
@@ -17,6 +18,7 @@ const LearnCloud = () => {
         "Gain hands-on experience with essential tools and techniques used in Cloud DevOps environments.",
         "Develop a foundation for further learning in advanced Cloud DevOps practices.",
       ],
+      link: "courses/beginner",
     },
     {
       title: "Comprehensive Cloud DevOps Course",
@@ -27,6 +29,7 @@ const LearnCloud = () => {
         "Design and build end-to-end DevOps pipelines using cloud resources and tools.",
         "Develop skills to manage complex Cloud environments while ensuring security and reliability.",
       ],
+      link: "courses/comprehensive",
     },
     {
       title: "Advanced Cloud DevOps Course",
@@ -37,6 +40,7 @@ const LearnCloud = () => {
         "Design and implement complex cloud-based microservices architectures.",
         "Gain proficiency in automating advanced DevOps workflows and continuous monitoring.",
       ],
+      link: "courses/advanced",
     },
   ];
 
@@ -78,7 +82,7 @@ const LearnCloud = () => {
             </ul>
 
             <div className="my-5">
-              <CustomButton color="yellow" link="#join">
+              <CustomButton color="yellow" link={card.link}>
                 Learn More
               </CustomButton>
             </div>

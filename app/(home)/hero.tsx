@@ -23,7 +23,7 @@ const Hero = () => {
             Become a highly in-demand Cloud DevOps professional.
           </h3>
 
-          <CustomButton link="#join">Get Started</CustomButton>
+          <CustomButton link="#course">Get Started</CustomButton>
 
           <div className="my-5 flex items-center w-fit text-purple-500 hover:text-purple-600 text-sm cursor-pointer hover:font-medium">
             <ChevronDown className="h-5 w-5" />{" "}
