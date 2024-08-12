@@ -59,11 +59,16 @@ const Course: React.FC<Props> = ({ params: { course } }) => {
             {teachingMethods.map((e, i) => (
               <div key={i} className="col-span-12 md:col-span-6 h-full">
                 <CustomCard>
-                  <div className="font-bold text-lg">{e.title}</div>
-                  <p className="my-5">{e.description}</p>
-
-                  <div className="">
-                    <CustomButton>Enroll Now</CustomButton>
+                  <div className="h-full flex flex-col justify-between">
+                    <div>
+                      <div className="font-bold text-lg">{e.title}</div>
+                      <p className="my-5 ">{e.description}</p>
+                    </div>
+                    <div className="">
+                      <CustomButton enroll enrollCourse={chosenCourse?.title}>
+                        Enroll Now
+                      </CustomButton>
+                    </div>
                   </div>
                 </CustomCard>
               </div>

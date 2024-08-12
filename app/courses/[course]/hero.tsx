@@ -1,4 +1,5 @@
 import CustomButton from "@/components/custom/customButton";
+import { Rocket } from "lucide-react";
 import React from "react";
 
 const CourseHero = ({ title }: { title: string | undefined }) => {
@@ -17,7 +18,12 @@ const CourseHero = ({ title }: { title: string | undefined }) => {
             {title}
           </h2>
 
-          <CustomButton link="#join">Enroll Now</CustomButton>
+          <CustomButton enroll enrollCourse={title}>
+            <div className="flex gap-2">
+              Enroll Now{" "}
+              <Rocket className="h-5 w-5 text-yellow-400 transition-all animate-bounce" />
+            </div>
+          </CustomButton>
         </div>
       </div>
     </div>

@@ -3,10 +3,13 @@ import React, { MouseEventHandler } from "react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+import { sendMail } from "@/lib/utils";
 
 interface Props {
   children: React.ReactNode;
   link?: string;
+  enrollCourse?: string;
+  enroll?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   color?: string;
   className?: string;
@@ -15,9 +18,11 @@ interface Props {
 const CustomButton: React.FC<Props> = ({
   children,
   link,
+  enroll,
   onClick,
   color,
   className,
+  enrollCourse,
 }) => {
   const router = useRouter();
 
@@ -26,6 +31,9 @@ const CustomButton: React.FC<Props> = ({
       router.push(link);
     } else if (onClick) {
       onClick(event);
+    } else if (enroll) {
+      console.log("enroll");
+      sendMail({ course: enrollCourse });
     }
   };
 
