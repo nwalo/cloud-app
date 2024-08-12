@@ -11,9 +11,9 @@ export const sendMail = ({ name, email, course }: IMail) => {
   const subject = encodeURIComponent(
     `Cloud Course Enrollment ${course ? `- ${course}` : ""}`
   );
-  const body = `Dear Admin,%0A%0A I, ${name}(${email}) wish to enroll for ${
-    course ? course : "a cloud course"
-  }. %0A%0A I look forward to your reply soonest.`;
+  const body = `Dear Admin,%0A%0A I, ${name} ${email && `(${email})`} 
+  wish to enroll for ${course ? course : "a cloud course"}. %0A%0A
+  I look forward to your reply soon.`;
 
   window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
 };
