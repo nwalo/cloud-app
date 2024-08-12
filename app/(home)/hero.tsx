@@ -11,7 +11,7 @@ const Hero = () => {
     <div className="shadow-md rounded-2xl py-10 pl-5 md:pl-20 my-5">
       <div className="grid grid-cols-12 gap-5">
         <div className="col-span-12 lg:col-span-6">
-          <div className="text-purple-500 bg-yellow-400 font-medium w-fit p-2 text-xs rounded-full">
+          <div className="text-purple-500 bg-yellow-400 font-medium w-fit py-2 px-3 text-xs rounded-full">
             Beginner to Pro
           </div>
 

@@ -1,9 +1,26 @@
+"use client";
 import CustomButton from "@/components/custom/customButton";
-import React from "react";
+import React, { useState } from "react";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { Input } from "@/components/ui/input";
+import { sendMail } from "@/lib/utils";
 
 const JoinCommunity = () => {
+  const initialState = { name: "", email: "" };
+  const [input, setInput] = useState(initialState);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setInput({ ...input, [name]: value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { name, email } = input;
+    sendMail({ name, email });
+    setInput(initialState);
+  };
+
   return (
     <div className="my-20" id="join">
       <div className="rounded-2xl bg-slate-200 py-10 px-5 md:p-10">
@@ -38,22 +55,26 @@ const JoinCommunity = () => {
               </ul>
             </div>
 
-            <form action="" className="max-w-[300px]">
+            <form className="max-w-[300px]" onSubmit={handleSubmit}>
               <Input
                 type="text"
                 className="border-purple text-purple my-5 rounded-[4px] hover:bg-[#6A1B9A14]"
                 placeholder="Name"
+                value={input.name}
+                name="name"
+                onChange={handleChange}
               />
 
               <Input
                 type="email"
                 className="border-purple text-purple my-5 rounded-[4px] hover:bg-[#6A1B9A14]"
                 placeholder="Email"
+                value={input.email}
+                name="email"
+                onChange={handleChange}
               />
 
-              <CustomButton color="" className="px-20">
-                Join
-              </CustomButton>
+              <CustomButton className="px-20">Join</CustomButton>
             </form>
           </div>
 

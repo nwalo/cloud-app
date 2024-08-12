@@ -1,4 +1,4 @@
-import { LinkedIn, Twitter, YouTube } from "@mui/icons-material";
+import { LinkedIn, Mail, Twitter, YouTube } from "@mui/icons-material";
 import Link from "next/link";
 import React from "react";
 import Cd1 from "../public/images/cd1.png";
@@ -88,6 +88,12 @@ const Footer = () => {
                   <div className="font-semibold">Contacts</div>
 
                   <div className="my-3 flex flex-col">
+                    <Link
+                      href="/"
+                      className="my-2 flex gap-2 items-center border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
+                    >
+                      <Mail /> Twitter
+                    </Link>
                     <Link
                       href="/"
                       className="my-2 border-b flex gap-2 items-center border-dotted w-fit border-black hover:border-purple hover:text-purple-500"

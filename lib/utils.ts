@@ -12,8 +12,9 @@ export const sendMail = ({ name, email, course }: IMail) => {
     `Cloud Course Enrollment ${course ? `- ${course}` : ""}`
   );
   const body = `Dear Admin,
-  %0A%0AI, ${name ? name : ""} ${email ? `(${email})` : ""} 
-  wish to enroll for ${course ? course : "a cloud course"}.
+  %0A%0AI, ${name ? name : ""} ${email ? `(${email})` : ""} wish to ${
+    name || email ? "join the community" : ""
+  } and enroll for ${course ? course : "a cloud course"}.
   %0A%0AI look forward to your reply soon.`;
 
   return (window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`);
