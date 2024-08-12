@@ -1,6 +1,19 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { IMail } from "@/models/mail";
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
+
+export const sendMail = ({ name, email, course }: IMail) => {
+  const emailTo = "okechukwu.nwalo@tenece.com";
+  const subject = encodeURIComponent(
+    `Cloud Course Enrollment ${course ? `- ${course}` : ""}`
+  );
+  const body = `Dear Admin,%0A%0A I, ${name}(${email}) wish to enroll for ${
+    course ? course : "a cloud course"
+  }. %0A%0A I look forward to your reply soonest.`;
+
+  window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+};
