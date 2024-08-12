@@ -67,6 +67,8 @@ export default CourseSummary;
 
 const summary = [
   { left: "100% Virtual", right: "Job Readiness Training" },
+  { left: "35 hours of on-demand video", right: "Downloadable resources" },
+  { left: "Assessments/Quizzes", right: "12 months of free access" },
   {
     left: "18 Weeks of Intense Training (Classroom + Practicals)",
     right: "Supportive Learning Community",

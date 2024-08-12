@@ -13,50 +13,50 @@ export const courses = [
     ],
     tools: [
       {
-        img: "",
+        img: "https://cloudboosta.com/images/aws.png",
         title: "AWS",
         description:
           "Use Amazon Web Services to build websites, databases, etc.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/linux.png",
         title: "Linux",
         description:
           "Master Linux operating system for running various devices.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/python.png",
         title: "Python",
         description: "Code with Python for software and websites.",
       },
       {
-        img: "Terraform",
-        title: "",
+        img: "https://cloudboosta.com/images/terraform.png",
+        title: "Terraform",
         description: "Manage cloud infrastructure with ease using Terraform.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/github.png",
         title: "Git & Github",
         description:
           "Track and collaborate on code projects using Git and GitHub.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/jenkins.png",
         title: "Jenkins",
         description: "Automate software testing and deployment with Jenkins.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/docker.png",
         title: "Docker",
         description: "Package and run applications reliably with Docker.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/kubernetes.png",
         title: "Kubernetes",
         description: "Automate app deployment and scaling using Kubernetes.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/ansible.png",
         title: "Ansible",
         description:
           "Automate server tasks for efficient and consistent configuration",
@@ -87,44 +87,44 @@ export const courses = [
           "Use Amazon Web Services to build websites, databases, etc.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/linux.png",
         title: "Linux",
         description:
           "Master Linux operating system for running various devices.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/python.png",
         title: "Python",
         description: "Code with Python for software and websites.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/terraform.png",
         title: "Terraform",
         description: "Manage cloud infrastructure with ease using Terraform.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/github.png",
         title: "Git & Github",
         description:
           "Track and collaborate on code projects using Git and GitHub.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/jenkins.png",
         title: "Jenkins",
         description: "Automate software testing and deployment with Jenkins.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/docker.png",
         title: "Docker",
         description: "Package and run applications reliably with Docker.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/kubernetes.png",
         title: "Kubernetes",
         description: "Automate app deployment and scaling using Kubernetes.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/ansible.png",
         title: "Ansible",
         description:
           "Automate server tasks for efficient and consistent configuration",
@@ -149,50 +149,50 @@ export const courses = [
     ],
     tools: [
       {
-        img: "",
+        img: "https://cloudboosta.com/images/aws.png",
         title: "AWS",
         description:
           "Use Amazon Web Services to build websites, databases, etc.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/linux.png",
         title: "Linux",
         description:
           "Master Linux operating system for running various devices.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/python.png",
         title: "Python",
         description: "Code with Python for software and websites.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/terraform.png",
         title: "Terraform",
         description: "Manage cloud infrastructure with ease using Terraform.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/github.png",
         title: "Git & Github",
         description:
           "Track and collaborate on code projects using Git and GitHub.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/jenkins.png",
         title: "Jenkins",
         description: "Automate software testing and deployment with Jenkins.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/docker.png",
         title: "Docker",
         description: "Package and run applications reliably with Docker.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/kubernetes.png",
         title: "Kubernetes",
         description: "Automate app deployment and scaling using Kubernetes.",
       },
       {
-        img: "",
+        img: "https://cloudboosta.com/images/ansible.png",
         title: "Ansible",
         description:
           "Automate server tasks for efficient and consistent configuration",

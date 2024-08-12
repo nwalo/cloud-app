@@ -33,7 +33,11 @@ const Course: React.FC<Props> = ({ params: { course } }) => {
         <div className="my-5 lg:my-20">
           <Header>
             <p className="leading-0 w-max">By the end of this course,</p>
-            you’ll be proficient in:
+            you’ll have{" "}
+            <span className="text-purple">
+              {course === "beginner" ? "fundamental" : course}
+            </span>{" "}
+            knwoledge in:
           </Header>
           <div className="my-16 grid grid-cols-12 gap-8">
             {chosenCourse?.tools.map((tool, i) => (
