@@ -41,13 +41,13 @@ const JoinCommunity = () => {
             <form action="" className="max-w-[300px]">
               <Input
                 type="text"
-                className="border-purple text-purple my-3 rounded-[4px] hover:bg-[#6A1B9A14]"
+                className="border-purple text-purple my-5 rounded-[4px] hover:bg-[#6A1B9A14]"
                 placeholder="Name"
               />
 
               <Input
                 type="email"
-                className="border-purple text-purple my-3 rounded-[4px] hover:bg-[#6A1B9A14]"
+                className="border-purple text-purple my-5 rounded-[4px] hover:bg-[#6A1B9A14]"
                 placeholder="Email"
               />
 

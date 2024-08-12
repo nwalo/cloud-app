@@ -48,16 +48,16 @@ const Footer = () => {
                       Home
                     </Link>
                     <Link
-                      href="/"
+                      href="/#about"
                       className="my-2 border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
                     >
                       About Us
                     </Link>
                     <Link
-                      href="/"
+                      href="/courses/beginner"
                       className="my-2 border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
                     >
-                      Services
+                      Courses
                     </Link>
                   </div>
                 </div>
@@ -65,19 +65,19 @@ const Footer = () => {
                   <div className="font-semibold">Courses</div>
                   <div className="my-3 flex flex-col">
                     <Link
-                      href="/"
+                      href="/courses/beginner"
                       className="my-2 border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
                     >
                       Beginner
                     </Link>
                     <Link
-                      href="/"
+                      href="/courses/comprehensive"
                       className="my-2 border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
                     >
                       Intermediate
                     </Link>
                     <Link
-                      href="/"
+                      href="/courses/advanced"
                       className="my-2 border-b border-dotted w-fit border-black hover:border-purple hover:text-purple-500"
                     >
                       Advanced

@@ -3,23 +3,33 @@ import Link from "next/link";
 import { Menu, Package2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import CustomButton from "./custom/customButton";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Logo from "./logo";
 import { useEffect, useState } from "react";
 
 export function Navigation() {
   const [sheetOpen, setSheetOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const navs = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/#about" },
+  ];
+
+  const courses = [
+    { name: "Beginner", path: "/courses/beginner" },
+    { name: "Comprehensive", path: "/courses/comprehensive" },
+    { name: "Advanced", path: "/courses/advance" },
   ];
 
   useEffect(() => {
@@ -36,14 +46,40 @@ export function Navigation() {
               key={i}
               href={nav.path}
               className={`text-muted-foreground transition-colors py-2 hover:text-purple border-purple-500 ${
-                pathname == nav.path ? "text-purple-500 border-b" : ""
+                pathname === nav.path ? "text-purple-500 border-b" : ""
               } hover:border-b`}
             >
               {nav.name}
             </Link>
           ))}
 
-          <CustomButton link="#join"> Enrol Now</CustomButton>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className={`hover:text-purple border-purple-500 hover:border-b py-2 ${
+                pathname.includes("courses") ? "text-purple-500 border-b" : ""
+              }`}
+            >
+              Courses
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white font-medium rounded-lg cursor-pointer">
+              {courses.map((nav, i) => (
+                <DropdownMenuItem key={i} className="p-0">
+                  <span
+                    onClick={() => router.push(nav.path)}
+                    className={`text-muted-foreground block w-full transition-colors md:text-sm px-2 py-2 hover:bg-purple-50 hover:text-purple ${
+                      nav.path === pathname
+                        ? "text-purple-500 border-b"
+                        : "text-[#333333]"
+                    }`}
+                  >
+                    {nav.name}
+                  </span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <CustomButton link="/#join"> Enrol Now</CustomButton>
         </div>
       </nav>
       <div className="flex md:hidden">
