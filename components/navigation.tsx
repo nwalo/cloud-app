@@ -94,10 +94,10 @@ export function Navigation() {
           </Button>
         </SheetTrigger>
         <SheetContent side="right" className="text-purple-500 bg-white">
-          <nav className="grid gap-6 text-lg font-medium">
+          <nav className="grid gap-2 text-lg font-medium w-full">
             <Link
               href="/"
-              className="flex items-center gap-2 text-lg font-semibold"
+              className="flex items-center gap-2 mb-5 text-lg font-semibold"
             >
               <Package2 className="h-6 w-6" /> Logo
               <span className="sr-only">Cloud App Inc</span>
@@ -106,11 +106,40 @@ export function Navigation() {
               <Link
                 key={i}
                 href={nav.path}
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className={`text-muted-foreground block w-full transition-colors md:text-sm m-0 px-2 py-2 hover:bg-purple-50 ${
+                  nav.path === pathname ? "bg-purple-200" : ""
+                }`}
               >
                 {nav.name}
               </Link>
             ))}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={`hover:text-purple border-purple-500 hover:bg-purple-50 w-full text-left p-2 ${
+                  pathname.includes("courses") ? "bg-purple-200" : ""
+                }`}
+              >
+                Courses
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white w-full font-medium rounded-lg cursor-pointer">
+                {courses.map((nav, i) => (
+                  <DropdownMenuItem key={i} className="p-0">
+                    <span
+                      onClick={() => router.push(nav.path)}
+                      className={`text-muted-foreground block w-full transition-colors md:text-sm px-2 py-2 hover:bg-purple-50 hover:text-purple ${
+                        nav.path === pathname
+                          ? "text-purple-500 border-b"
+                          : "text-[#333333]"
+                      }`}
+                    >
+                      {nav.name}
+                    </span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <CustomButton link="#join"> Enrol Now</CustomButton>
           </nav>
         </SheetContent>
