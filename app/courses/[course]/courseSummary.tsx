@@ -24,7 +24,10 @@ const CourseSummary = () => {
         </p>
 
         {summary.map((e, i) => (
-          <div className="grid grid-cols-2 gap-10 items-center" key={i}>
+          <div
+            className="grid grid-cols-2 gap-1 md:gap-10 items-center"
+            key={i}
+          >
             {e.left && (
               <div className="col-span-2 md:col-span-1">
                 <div className="text-lg">
@@ -32,7 +35,7 @@ const CourseSummary = () => {
                     <li className="flex items-center gap-5">
                       <ChevronRightCircle
                         fontSize="small"
-                        style={{ color: "#fff" }}
+                        style={{ color: "#fff", minWidth: 24 }}
                       />
                       {e.left}
                     </li>
@@ -48,7 +51,7 @@ const CourseSummary = () => {
                     <li className="flex items-center gap-5">
                       <ChevronRightCircle
                         fontSize="small"
-                        style={{ color: "#fff" }}
+                        style={{ color: "#fff", minWidth: 24 }}
                       />
                       {e.right}
                     </li>
@@ -66,19 +69,28 @@ const CourseSummary = () => {
 export default CourseSummary;
 
 const summary = [
-  { left: "100% Virtual", right: "Job Readiness Training" },
-  { left: "35 hours of on-demand video", right: "Downloadable resources" },
-  { left: "Assessments/Quizzes", right: "12 months of free access" },
   {
-    left: "18 Weeks of Intense Training (Classroom + Practicals)",
-    right: "Supportive Learning Community",
-  },
-  {
-    left: "Weekly Live Classes (Saturdays)",
-    right: "Certificate of Completion",
+    left: "100% Virtual",
+    right: "35 hours of on-demand video",
   },
   {
     left: "Start Building from Day 1 with our Step by Step Labs",
+    right: "18 Weeks of Interactive Intense Training (Classroom + Practicals)",
+  },
+  {
+    left: "Weekly Live Classes (Saturdays)",
+    right: "Downloadable resources",
+  },
+  {
+    left: "Assessments/Quizzes",
+    right: "12 months of free access",
+  },
+  {
+    left: "Supportive Learning Community",
+    right: "Job Readiness Training",
+  },
+  {
+    left: "Certificate of Completion",
     // right: "Job Readiness Training",
   },
 ];
